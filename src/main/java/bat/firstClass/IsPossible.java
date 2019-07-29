@@ -47,7 +47,7 @@ public class IsPossible {
 		}
 		return true;
 	}
-
+	
 	//合并条件
 	private static boolean isPossibleMethod2(String[] in, String[] out) {
 		Stack<String> s = new Stack<String>();

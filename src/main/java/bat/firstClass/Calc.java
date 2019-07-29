@@ -36,16 +36,13 @@ public class Calc {
 	}
 
 	private static int caclMethod(int[][] G) {
-		//每个节点第几步可以到达
-		int[] step = new int[N];
-		//每个节点有几种走法
-		int[] stepNumber = new int[N];
+		
+		int[] step = new int[N];	//每个节点第几步可以到达
+		int[] stepNumber = new int[N];	//每个节点有几种走法
 		
 		stepNumber[0] = 1;
-		//当前搜索的几点
-		Stack<Integer> q = new Stack<Integer>();
+		Stack<Integer> q = new Stack<Integer>();	//当前搜索的几点
 		q.push(0);
-		
 		int from,i,s;
 		while(!q.empty()) {
 			from = q.firstElement();
@@ -65,10 +62,8 @@ public class Calc {
 					print(from+"-"+i+"stepnumber",stepNumber);
 				}
 			}
-			
 		}
 		return stepNumber[N-1];
-		
 	}
 	
 	static void print(String name,int [] a) {

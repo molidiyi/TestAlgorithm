@@ -1,8 +1,11 @@
 package bat.secondClass;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Permutation {
 	public static void main(String[] args) {
-		int a[] = {1,2,2,4};
+		int a[] = {1,2,3};
 		permutation(a, a.length, 0);
 	}
 	public static void permutation(int a [], int size,int n) {
@@ -12,7 +15,7 @@ public class Permutation {
 		}
 		for (int i = n; i < size; i++) {
 			
-			if(lsDuplicate(a,n,i)) {
+			if(isDuplicate(a,n,i)) {
 				continue;
 			}
 			
@@ -21,7 +24,7 @@ public class Permutation {
 			swap(a,i,n);
 		}
 	}
-	private static boolean lsDuplicate(int[] a, int n, int i) {
+	private static boolean isDuplicate(int[] a, int n, int i) {
 		while(n<i) {
 			if(a[i] == a[n]) {
 				return true;

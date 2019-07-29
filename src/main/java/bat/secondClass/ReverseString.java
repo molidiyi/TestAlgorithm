@@ -4,7 +4,7 @@ package bat.secondClass;
  * 字符串循环做移
  * abcdef ==》 cdefab
  * @author jennyzou
- *
+ * 2.字符串 p7
  */
 public class ReverseString {
 	public static void main(String[] args) {
@@ -32,14 +32,12 @@ public class ReverseString {
 			System.err.println("下标越界");
 			return;
 		}
-		
 		reverseString(str,m-move,m-1);
 		reverseString(str,m,m+n);
 		reverseString(str,m-move,m+n);
 	}
 	
 	public static void reverseString(char[] str,int from,int to) {
-//		System.out.println(from+"-->"+to);
 		while(from < to) {
 			char temp = str[from];
 			str[from++] = str[to];
